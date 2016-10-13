@@ -1,0 +1,24 @@
+<body>
+    <a class="ajax-link" href="turn-on">Turn On</a> | <a class="ajax-link" href="turn-off">Turn Off</a>
+    <div id="state">
+    </div>
+    <script src="static/socket.io.min.js"></script>
+    <script src="static/jquery-3.1.1.min.js"></script>
+    <script>
+        // send ajax request to server
+        $('.ajax-link').click(function(event){
+            event.preventDefault();
+            url = $(this).attr('href');
+            $.ajax({'url':url});
+        });
+        // catch "button state" message from client
+        socket = io();
+        socket.on("button state", function(msg){
+            if(msg == 1){
+                $('#state').html('Pressed');
+            }else{
+                $('#state').html('');
+            }
+        });
+    </script>
+</body>

@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Just a test case for intel galileo",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-generator": "^4.13.4",
+    "galileo-io": "^0.9.4",
+    "mraa": "^1.3.0",
+    "socket.io": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
